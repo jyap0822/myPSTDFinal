@@ -1,0 +1,8 @@
+{
+  "name": "myPSTD2018",
+  "app_id": "00a0b4eb",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
