@@ -1,0 +1,29 @@
+<!--
+  Generated template for the ScheduleDay1Page page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color="pstd1">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Download Day 2</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-list>
+      <ion-item *ngFor="let download of downloads" text-wrap>
+        <h2 text-left>
+          <strong>{{download.topic}}</strong>
+        </h2>
+        <p text-left>Speaker: {{download.speaker}}</p>
+        <button ion-button clear item-right (click)="openLink(download.link)">
+          <ion-icon name="download"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>

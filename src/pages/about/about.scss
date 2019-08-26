@@ -1,0 +1,23 @@
+page-about {
+
+}
+
+
+.about-background {
+background: url('../assets/BG2B.png') no-repeat fixed center; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+background-size: cover;
+}
+
+
+.upper-margin{
+    margin-top: 1%;
+}
+
+.menu-bg{
+    background-image: url('../assets/imgs/menubar-2.png')!important;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}

@@ -1,14 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<ion-content padding class="home-menu-background">
+    <img src="../assets/transformlogo.png" class="center-logo" />
+  <ion-grid>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-row class="button-margin">
+      <ion-col text-right (click)="about()">
+        <ion-img class="trans" width="70" height="100" src="../assets/icons/about-icon.png"></ion-img>
+      </ion-col>
+    
+      <ion-col text-right (click)="schedule()">
+        <ion-img class="trans" width="70" height="100" src="../assets/icons/schedule-icon.png"></ion-img>
+      </ion-col>
+    
+      <ion-col text-right (click)="location()">
+        <ion-img class="trans" width="70" height="100" src="../assets/icons/loc-icon.png"></ion-img>
+      </ion-col>
+     </ion-row>
+
+    <ion-row>
+      <ion-col text-right (click)="speakers()">
+        <ion-img class="trans" width="70" height="100" src="../assets/icons/speak-icon.png"></ion-img>
+      </ion-col>
+
+     <ion-col text-right (click)="sponsors()">
+        <ion-img class="trans" width="70" height="100" src="../assets/icons/spons-icon.png"></ion-img>
+      </ion-col>
+
+      <ion-col text-right (click)="contact()">
+          <ion-img class="trans" width="70" height="100" src="../assets/icons/contacts-icon.png"></ion-img>
+        </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

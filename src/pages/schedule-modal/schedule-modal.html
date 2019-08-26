@@ -1,0 +1,109 @@
+<!--
+  Generated template for the ScheduleModal page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="pstd1">
+    <ion-title>
+      <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
+      Session Details</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <h3 class="text-color title-padding" text-center>{{content.topic}}</h3>
+  <div *ngIf="content.concurrentSession == false;else concurrentSession">
+    <!--Non concurrent Session-->
+    <img class="center" padding *ngIf="content.speaker_image != '';else placeholder" src="{{content.speaker_image}}" />
+    <ng-template #placeholder>
+      <img class="center" src="assets/placeholder.png" />
+    </ng-template>
+    <div class="background" padding>
+      <strong>Speaker:</strong> {{content.speaker}}
+      <br>
+      <strong>Venue:</strong> {{content.venue}}
+      <br>
+      <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
+      <br>
+    </div>
+    <br>
+    <p class="title-padding">{{content.details}}</p>
+    <br>
+  </div>
+  <!--concurrent Session-->
+  <ng-template #concurrentSession>
+    <ion-segment [(ngModel)]="halls" color="pstd1">
+      <ion-segment-button value="Hall 1">
+        Pit Stop 1
+      </ion-segment-button>
+      <ion-segment-button value="Hall 2">
+        Pit Stop 2
+      </ion-segment-button>
+      <ion-segment-button value="Hall 3">
+        Pit Stop 3
+      </ion-segment-button>
+    </ion-segment>
+    <div [ngSwitch]="halls">
+      <div *ngSwitchDefault>
+        <h6 class="text-color" text-center>{{content.concurrentSession1}}</h6>
+        <img class="center" padding *ngIf="content.concurrentSession1SpkImg != '';else placeholder" src="{{content.concurrentSession1SpkImg}}"
+        />
+        <ng-template #placeholder>
+          <img class="center" src="assets/placeholder.png" />
+        </ng-template>
+        <div class="background" padding>
+          <strong>Speaker:</strong> {{content.concurrentSession1Spk}}
+          <br>
+          <strong>Learning Track:</strong> {{content.concurrentSession1Trk}}
+          <br>
+          <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
+          <br>
+          <p>{{content.concurrentSession1Details}}</p>
+        </div>
+      </div>
+      <div *ngSwitchCase="'Hall 2'">
+        <h6 class="text-color" text-center>{{content.concurrentSession2}}</h6>
+        <img class="center" padding *ngIf="content.concurrentSession2SpkImg != '';else placeholder" src="{{content.concurrentSession2SpkImg}}"
+        />
+        <ng-template #placeholder>
+          <img class="center" src="assets/placeholder.png" />
+        </ng-template>
+        <div class="background" padding>
+          <strong>Speaker:</strong> {{content.concurrentSession2Spk}}
+          <br>
+          <strong>Learning Track:</strong> {{content.concurrentSession2Trk}}
+          <br>
+          <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
+          <br>
+          <p>{{content.concurrentSession2Details}}</p>
+        </div>
+      </div>
+      <div *ngSwitchCase="'Hall 3'">
+        <h6 class="text-color" text-center>{{content.concurrentSession3}}</h6>
+        <img class="center" padding *ngIf="content.concurrentSession3SpkImg != '';else placeholder" src="{{content.concurrentSession3SpkImg}}"
+        />
+        <ng-template #placeholder>
+          <img class="center" src="assets/placeholder.png" />
+        </ng-template>
+        <div class="background" padding>
+          <strong>Speaker:</strong> {{content.concurrentSession3Spk}}
+          <br>
+          <strong>Learning Track:</strong> {{content.concurrentSession3Trk}}
+          <br>
+          <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
+          <br>
+          <p>{{content.concurrentSession3Details}}</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</ion-content>

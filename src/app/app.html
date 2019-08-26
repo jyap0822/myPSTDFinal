@@ -1,1 +1,24 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu id="myMenu" [content]="content">
+    <ion-header>
+      <ion-toolbar transparent class="menu-bg">
+        <ion-title>Transform 2019</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+  
+      <img padding src="./assets/transformlogo.png" />
+      <ion-list>
+        <button block large menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-avatar item-left>
+            <img src='{{p.image}}'/>
+            </ion-avatar>
+          {{p.title}}
+        </button>
+      </ion-list>
+    </ion-content>
+  
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

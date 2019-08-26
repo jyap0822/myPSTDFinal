@@ -1,3 +1,31 @@
 page-home {
 
 }
+
+.home-menu-background {
+    background-image: url('../assets/BG2B.png');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+}
+.center-logo {
+    margin-top: 10%
+
+}
+
+.button-margin{
+    margin-top: 30%
+}
+
+ion-img {
+        display: inline-block;
+        min-width: 20px;
+        min-height: 20px;
+    
+        contain: strict;
+    }
+    
+    .trans
+    {
+        background: transparent;
+    }
