@@ -3,17 +3,17 @@ page-contacts {
 }
 
 .contact-background {
-background: url('../assets/backgrounds/BG1-C.png') no-repeat fixed center; 
--webkit-background-size: cover;
--moz-background-size: cover;
-background-size: cover;
-}
+    background: url('../assets/BG2B.png') no-repeat fixed center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    }
 
 .text-color-contact{
     color: #f4f4f4;
 }
 
 .upper-margin-contact{
-    margin-top: 45%;
+    margin-top: 10%;
     color: black;
 }

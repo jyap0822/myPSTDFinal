@@ -1,25 +1,25 @@
-ionic cordova build --release androidpage-schedule-modal {
+androidpage-schedule-modal {
 
 }
 
 .text-color{
-    color:    #086425
+    color:    #000301
 }
 
 .background{
-    background-color:    #dbdddc
+    background-color:    #ffffff
 }
 
 .background-details{
-    background-color:    #00843f;
-    color: white;
+    background-color:    #000000;
+    color: rgb(255, 255, 255);
 }
 
 .center {
     margin-left: auto;
     margin-right: auto;
-    height: 250px;
-    width: 250px;
+    height: 60%;
+    width:  60%;
     display: block;
 }
 

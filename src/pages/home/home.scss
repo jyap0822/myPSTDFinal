@@ -8,22 +8,18 @@ page-home {
     background-repeat:   no-repeat;
     background-position: center center;              /* optional, center the image */
 }
-.center-logo {
-    margin-top: 10%
-
-}
 
 .button-margin{
     margin-top: 30%
 }
 
 ion-img {
-        display: inline-block;
-        min-width: 20px;
-        min-height: 20px;
-    
-        contain: strict;
-    }
+    display: inline-block;
+    min-width: 10%;
+    min-height: 10%;
+    float: left;
+    contain: strict;
+}
     
     .trans
     {

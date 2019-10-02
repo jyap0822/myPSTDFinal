@@ -9,7 +9,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-  rootPage:any = 'HomePage';
+  rootPage:any = 'AboutPage';
   pages: Array<{ title: string, component: any, image: string }>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -17,14 +17,12 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       // { title: 'List', component: ListPage },
-      { title: 'About', component: 'AboutPage', image: './assets/icons/about2.svg' },
-      { title: 'Voting', component: 'VotingPage', image: './assets/icons/PSTD_sponsors-icon.svg' },
-      { title: 'Schedule', component: 'ScheduleTabsPage', image: './assets/icons/sched2.svg' },
+      { title: 'About', component: 'AboutPage', image: './assets/icons/ABOUT2.svg' },
+      { title: 'Schedule', component: 'ScheduleTabsPage', image: './assets/icons/SCHED2.svg' },
       { title: 'Speakers', component: 'SpeakersTabsPage', image: './assets/icons/speak2.svg' },
-      { title: 'Sponsors', component: 'SponsorsTabPage', image: './assets/icons/spon2.svg' },
-      { title: 'Download', component: 'DownloadTabsPage', image: './assets/icons/sched2.svg' },
-      { title: 'Venue', component: 'CityPage', image: './assets/icons/PSTD_map-icon.svg' },
-      { title: 'Contact', component: 'ContactsPage', image: './assets/icons/contact2.svg' },
+      { title: 'Sponsors', component: 'SponsorsTabPage', image: './assets/icons/SPON2.svg' },
+      { title: 'Venue', component: 'CityPage', image: './assets/icons/LOCATION2.svg' },
+      { title: 'Contact', component: 'ContactsPage', image: './assets/icons/CONTACT2.svg' },
       ];
     
     platform.ready().then(() => {

@@ -6,7 +6,7 @@
 -->
 <ion-header>
 
-  <ion-navbar color="pstd1">
+  <ion-navbar transparent class="menu-bg">
     <ion-title>
       <ion-icon ios="ios-information-circle" md="md-information-circle"></ion-icon>
       Session Details</ion-title>
@@ -19,36 +19,34 @@
 
 <ion-content>
 
-  <h3 class="text-color title-padding" text-center>{{content.topic}}</h3>
+  <h3 class="title-padding" text-center>{{content.topic}}</h3>
   <div *ngIf="content.concurrentSession == false;else concurrentSession">
     <!--Non concurrent Session-->
     <img class="center" padding *ngIf="content.speaker_image != '';else placeholder" src="{{content.speaker_image}}" />
     <ng-template #placeholder>
       <img class="center" src="assets/placeholder.png" />
     </ng-template>
-    <div class="background" padding>
+    <div transparent class="about-background">
       <strong>Speaker:</strong> {{content.speaker}}
       <br>
       <strong>Venue:</strong> {{content.venue}}
       <br>
       <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
-      <br>
-    </div>
-    <br>
-    <p class="title-padding">{{content.details}}</p>
-    <br>
+      <p class="about-background">{{content.details}}</p>
   </div>
+    </div>
+    
   <!--concurrent Session-->
   <ng-template #concurrentSession>
-    <ion-segment [(ngModel)]="halls" color="pstd1">
+    <ion-segment [(ngModel)]="halls" color="text-color" class="menu-bg">
       <ion-segment-button value="Hall 1">
-        Pit Stop 1
+        Session A
       </ion-segment-button>
       <ion-segment-button value="Hall 2">
-        Pit Stop 2
+        Session B
       </ion-segment-button>
       <ion-segment-button value="Hall 3">
-        Pit Stop 3
+        Session C
       </ion-segment-button>
     </ion-segment>
     <div [ngSwitch]="halls">
@@ -59,7 +57,7 @@
         <ng-template #placeholder>
           <img class="center" src="assets/placeholder.png" />
         </ng-template>
-        <div class="background" padding>
+        <div class="about-background" padding>
           <strong>Speaker:</strong> {{content.concurrentSession1Spk}}
           <br>
           <strong>Learning Track:</strong> {{content.concurrentSession1Trk}}
@@ -76,13 +74,12 @@
         <ng-template #placeholder>
           <img class="center" src="assets/placeholder.png" />
         </ng-template>
-        <div class="background" padding>
+        <div class="about-background" padding>
           <strong>Speaker:</strong> {{content.concurrentSession2Spk}}
           <br>
           <strong>Learning Track:</strong> {{content.concurrentSession2Trk}}
           <br>
           <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
-          <br>
           <p>{{content.concurrentSession2Details}}</p>
         </div>
       </div>
@@ -93,13 +90,12 @@
         <ng-template #placeholder>
           <img class="center" src="assets/placeholder.png" />
         </ng-template>
-        <div class="background" padding>
+        <div class="about-background" padding>
           <strong>Speaker:</strong> {{content.concurrentSession3Spk}}
           <br>
           <strong>Learning Track:</strong> {{content.concurrentSession3Trk}}
           <br>
           <strong>Time:</strong> {{content.time_start}} - {{content.time_end}}
-          <br>
           <p>{{content.concurrentSession3Details}}</p>
         </div>
       </div>
